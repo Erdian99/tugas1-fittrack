@@ -16,4 +16,10 @@ public class Member{
     public String getJenisPaket(){
         return this.jenisPaket;
     }
+    public void setNama(String nama){
+        this.nama = nama;
+    }
+    public void setNoTelepon(String noTelepon){
+        this.noTelepon = noTelepon;
+    }
 }
