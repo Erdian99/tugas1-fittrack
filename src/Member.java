@@ -1,13 +1,18 @@
-public class Member{
-    private String nama = "Supri";
-    private String noTelepon = "0812345678";
-    private String tanggalDaftar = "1 Januari 2026";
-    private String jenisPaket = "VIP";
+public class Member {
+    private final String NAMA_DEFAULT = "Member";
+    private final String NO_TELP_DEFAULT = "0812345678";
+    private final String TANGGAL_DAFTAR_DEFAULT = "01 Januari 2026";
+    private final String JENIS_PAKET_DEFAULT = "Basic";
+
+    private String nama;
+    private String noTelepon;
+    private String tanggalDaftar;
+    private String jenisPaket;
 
     public String getNama(){
         return this.nama;
     }
-    public void setNama(String nama){   
+    public void setNama(String nama){
         this.nama = nama;
     }
     public String getNoTelepon(){
@@ -28,17 +33,34 @@ public class Member{
     public void setJenisPaket(String jenisPaket){
         this.jenisPaket = jenisPaket;
     }
-    void nama() {
-        System.out.println("Masukkan Nama Anda: ");
-    }
-    void noTelepon() {
-        System.out.println("Masukkan No Telepon Anda: ");
-    }
-    void tanggalDaftar() {
-        System.out.println("Tanggal Daftar Anda: ");
-    }
-    void jenisPaket() {
-        System.out.println("Pilih Jenis Paket Yang Di Inginkan: ");
+
+
+    void Member1(){
+        if(nama == null){
+            System.out.println(NAMA_DEFAULT);
+        }
+        else{
+            System.out.println("Nama" + nama);
+        }
+        if(noTelepon == null){
+            System.out.println(NO_TELP_DEFAULT);
+        }
+        else{
+            System.out.println("No Telepon" + noTelepon);
+        }
+        if(tanggalDaftar == null){
+            System.out.println(TANGGAL_DAFTAR_DEFAULT);
+        }
+        else{
+            System.out.println("Tanggal Daftar" + nama);
+        }
+        if(jenisPaket == null){    
+           System.out.println(JENIS_PAKET_DEFAULT);
+        }
+        else{ 
+            System.out.println("Jenis Paket" + nama);
+        }
     }
     
 }
+
