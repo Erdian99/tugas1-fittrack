@@ -1,10 +1,8 @@
 public class TesFitTrack{
     public static void main(String []args){
+        System.out.println("Sistem Keanggotaaan Gym FitTrack");
         Member a = new Member();
-        a. nama();
-        a. noTelepon();
-        a. tanggalDaftar();
-        a. jenisPaket();
+        a. Member1();
         
     }
 }
