@@ -61,6 +61,84 @@ public class Member {
             System.out.println("Jenis Paket" + nama);
         }
     }
+        void Member2(){
+        if(nama == null){
+            System.out.println(NAMA_DEFAULT);
+        }
+        else{
+            System.out.println("Nama" + nama);
+        }
+        if(noTelepon == null){
+            System.out.println(NO_TELP_DEFAULT);
+        }
+        else{
+            System.out.println("No Telepon" + noTelepon);
+        }
+        if(tanggalDaftar == null){
+            System.out.println(TANGGAL_DAFTAR_DEFAULT);
+        }
+        else{
+            System.out.println("Tanggal Daftar" + nama);
+        }
+        if(jenisPaket == null){    
+           System.out.println(JENIS_PAKET_DEFAULT);
+        }
+        else{ 
+            System.out.println("Jenis Paket" + nama);
+        }
+    }
+        void Member3(){
+        if(nama == null){
+            System.out.println(NAMA_DEFAULT);
+        }
+        else{
+            System.out.println("Nama" + nama);
+        }
+        if(noTelepon == null){
+            System.out.println(NO_TELP_DEFAULT);
+        }
+        else{
+            System.out.println("No Telepon" + noTelepon);
+        }
+        if(tanggalDaftar == null){
+            System.out.println(TANGGAL_DAFTAR_DEFAULT);
+        }
+        else{
+            System.out.println("Tanggal Daftar" + nama);
+        }
+        if(jenisPaket == null){    
+           System.out.println(JENIS_PAKET_DEFAULT);
+        }
+        else{ 
+            System.out.println("Jenis Paket" + nama);
+        }
+    }
+        void Member4(){
+        if(nama == null){
+            System.out.println(NAMA_DEFAULT);
+        }
+        else{
+            System.out.println("Nama" + nama);
+        }
+        if(noTelepon == null){
+            System.out.println(NO_TELP_DEFAULT);
+        }
+        else{
+            System.out.println("No Telepon" + noTelepon);
+        }
+        if(tanggalDaftar == null){
+            System.out.println(TANGGAL_DAFTAR_DEFAULT);
+        }
+        else{
+            System.out.println("Tanggal Daftar" + nama);
+        }
+        if(jenisPaket == null){    
+           System.out.println(JENIS_PAKET_DEFAULT);
+        }
+        else{ 
+            System.out.println("Jenis Paket" + nama);
+        }
+    }
     
 }
 
