@@ -3,6 +3,9 @@ public class TesFitTrack{
         System.out.println("Sistem Keanggotaaan Gym FitTrack");
         Member a = new Member();
         a. Member1();
+        a. Member2();
+        a. Member3();
+        a. Member4();
         
     }
 }
