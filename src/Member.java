@@ -12,23 +12,23 @@ public class Member {
     public String getNama(){
         return this.nama;
     }
-    public void setNama(String nama){
-        this.nama = nama;
-    }
     public String getNoTelepon(){
         return this.noTelepon;
-    }
-    public void setNoTelepon(String noTelepon){
-        this.noTelepon = noTelepon;
     }
     public String getTanggalDaftar(){
         return this.tanggalDaftar;
     }
-    public void setTanggalDaftar(String tanggalDaftar){
-        this.tanggalDaftar = tanggalDaftar;
-    }
     public String getJenisPaket(){
         return this.jenisPaket;
+    }
+    public void setNama(String nama){
+        this.nama = nama;
+    }
+    public void setNoTelepon(String noTelepon){
+        this.noTelepon = noTelepon;
+    }
+    public void setTanggalDaftar(String tanggalDaftar){
+        this.tanggalDaftar = tanggalDaftar;
     }
     public void setJenisPaket(String jenisPaket){
         this.jenisPaket = jenisPaket;
