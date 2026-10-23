@@ -22,7 +22,12 @@ public class Member {
         return this.jenisPaket;
     }
     public void setNama(String nama){
-        this.nama = nama;
+        if (nama != null && nama.equalsIgnoreCase(" ")) {
+            this.nama = nama;
+        }
+        else {
+            System.out.println("Nama tidak boleh kosong!!");
+        }
     }
     public void setNoTelepon(String noTelepon){
         if (noTelepon != null && noTelepon.startsWith("0") && noTelepon.length() >= 10){
@@ -33,7 +38,12 @@ public class Member {
         }
     }
     public void setTanggalDaftar(String tanggalDaftar){
-        this.tanggalDaftar = tanggalDaftar;
+        if (tanggalDaftar == null) {
+            System.out.println("Silahkan masukkan tanggal daftar!!");
+        }
+        else{
+            this.tanggalDaftar = tanggalDaftar;
+        }
     }
     public void setJenisPaket(String jenisPaket){
         if (jenisPaket != null && (jenisPaket.equalsIgnoreCase("Basic") || jenisPaket.equalsIgnoreCase("Premium") || jenisPaket.equalsIgnoreCase("VIP"))){
