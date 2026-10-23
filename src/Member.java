@@ -22,7 +22,7 @@ public class Member {
         return this.jenisPaket;
     }
     public void setNama(String nama){
-        if (nama != null && nama.equalsIgnoreCase(" ")) {
+        if (nama != null && !nama.trim().isEmpty()) {
             this.nama = nama;
         }
         else {
