@@ -4,6 +4,8 @@ public class Member {
     private static final String TANGGAL_DAFTAR_DEFAULT = "01 Januari 2026";
     private static final String JENIS_PAKET_DEFAULT = "Basic";
 
+    private static final int MIN_DIGIT_TELP = 10;
+
     private String nama;
     private String noTelepon;
     private String tanggalDaftar;
@@ -39,27 +41,24 @@ public class Member {
         }
     }
     public void setNoTelepon(String noTelepon){
-        if (noTelepon != null && noTelepon.startsWith("0") && noTelepon.length() >= 10){
+        if (noTelepon != null && noTelepon.startsWith("0") && noTelepon.length() >= MIN_DIGIT_TELP){
             this.noTelepon = noTelepon;
         }
         else{
-            this.noTelepon = NO_TELP_DEFAULT;
+            System.out.println("No telepon harus dimulai dari angka 0, dan minimal 10 angka");
         }
     }
     public void setTanggalDaftar(String tanggalDaftar){
-        if (tanggalDaftar == null) {
-            System.out.println("Silahkan masukkan tanggal daftar!!");
+        if (tanggalDaftar != null && !tanggalDaftar.trim().isEmpty()) {
+           this.tanggalDaftar = tanggalDaftar;
         }
         else{
-            this.tanggalDaftar = tanggalDaftar;
+            System.out.println("Silahkan masukkan tanggal daftar!!");
         }
     }
     public void setJenisPaket(String jenisPaket){
         if (jenisPaket != null && (jenisPaket.equalsIgnoreCase("Basic") || jenisPaket.equalsIgnoreCase("Premium") || jenisPaket.equalsIgnoreCase("VIP"))){
             this.jenisPaket = jenisPaket;
-        }
-        else{
-            this.jenisPaket = JENIS_PAKET_DEFAULT;
         }
     }
 } 
