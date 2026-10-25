@@ -9,6 +9,15 @@ public class Member {
     private String tanggalDaftar;
     private String jenisPaket;
 
+    public Member(String nama, String noTelepon, String tanggalDaftar, String jenisPaket){
+        setNama(nama);
+        setNoTelepon(noTelepon);
+        setTanggalDaftar(tanggalDaftar);
+        setJenisPaket(jenisPaket);
+    }
+    public Member(String nama, String noTelepon, String tanggalDaftar){
+        this(nama, noTelepon, tanggalDaftar, "Basic");
+    }
     public String getNama(){
         return this.nama;
     }
