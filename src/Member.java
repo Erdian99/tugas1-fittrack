@@ -1,4 +1,13 @@
 public class Member {
+    @Override 
+    public String toString(){
+        return  "Member Gym FitTrack:" +
+                "\n Nama            :" + this.nama +
+                "\n No. Telepon     :" + this.noTelepon +
+                "\n Tanggal Daftar  :" + this.tanggalDaftar +
+                "\n Jenis Paket     :" + this.jenisPaket +
+                "\n-----------------------------------";
+    }
     private static final String NAMA_DEFAULT = "Member";
     private static final String NO_TELP_DEFAULT = "0812345678";
     private static final String TANGGAL_DAFTAR_DEFAULT = "01 Januari 2026";
