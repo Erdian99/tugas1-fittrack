@@ -1,39 +1,18 @@
 public class TesFitTrack{
     public static void main(String []args){
         System.out.println("Sistem Keanggotaaan Gym FitTrack");
-        Member member1 = new Member();
-        Member member2 = new Member();
-        Member member3 = new Member();
 
-        
-        member1.setNama("Budiono Siregar");
-        member1.setNoTelepon("085211223344");
-        member1.setTanggalDaftar("18 Oktober 2026");
-        member1.setJenisPaket("Basic");
+        Member[] daftarMember = new Member[4];
 
-        System.out.println("Nama            :" + member1.getNama());
-        System.out.println("No Telepon      :" + member1.getNoTelepon());
-        System.out.println("Tanggal Daftar  :" + member1.getTanggalDaftar());
-        System.out.println("Jenis Paket     :" + member1.getJenisPaket());
+        daftarMember[0] = new Member("Budiono Siregar", "085211223344", "18 Oktober 2026", "Basic");
+        daftarMember[1] = new Member("Reza Auditore", "0852100876", "09 Juni 2026", "Premium");
+        daftarMember[2] = new Member("Sumanto", "0852765499", "31 Juli 2026", "VIP");
+        daftarMember[3] = new Member("Amba Tukam", "081122334455", "01 Oktober 2026");
 
-        member2.setNama("Reza Auditore");
-        member2.setNoTelepon("0852100876");
-        member2.setTanggalDaftar("09 Juni 2026");
-        member2.setJenisPaket("Premium");
+        daftarMember[0].setNoTelepon("62852765499");
 
-        System.out.println("Nama            :" + member2.getNama());
-        System.out.println("No Telepon      :" + member2.getNoTelepon());
-        System.out.println("Tanggal Daftar  :" + member2.getTanggalDaftar());
-        System.out.println("Jenis Paket     :" + member2.getJenisPaket());
-
-        member3.setNama("Sumanto");
-        member3.setNoTelepon("0852765499");
-        member3.setTanggalDaftar("31 Juli 2026");
-        member3.setJenisPaket("VIP");
-
-        System.out.println("Nama            :" + member3.getNama());
-        System.out.println("No Telepon      :" + member3.getNoTelepon());
-        System.out.println("Tanggal Daftar  :" + member3.getTanggalDaftar());
-        System.out.println("Jenis Paket     :" + member3.getJenisPaket());
+        for (int i = 0; i <= daftarMember.length; i++){
+            System.out.println(daftarMember[i]);
+        }
     }
 }
