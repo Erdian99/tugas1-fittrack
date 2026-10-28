@@ -21,7 +21,8 @@ public class Member {
     private String noTelepon;
     private String tanggalDaftar;
     private String jenisPaket;
-
+    
+    private String errorNoTelepon = "";
     /** Membuat objek {@code Member} baru dengan menentukan seluruh atribut secara spesifik.
      * 
      * @param nama              Nama lengkap anggota (tidak boleh kosong atau hanya spasi saja)
@@ -44,6 +45,8 @@ public class Member {
      */
     public Member(String nama, String noTelepon, String tanggalDaftar){
         this(nama, noTelepon, tanggalDaftar, "Basic");
+    }
+    public Member(){
     }
     /**
      * Mengambil nama anggota.
@@ -98,11 +101,14 @@ public class Member {
      * @param noTelepon Nomor telepon baru yang akan ditetapkan
      */
     public void setNoTelepon(String noTelepon){
+        this.noTelepon = noTelepon;
+
         if (noTelepon != null && noTelepon.startsWith("0") && noTelepon.length() >= MIN_DIGIT_TELP){
             this.noTelepon = noTelepon;
+            this.errorNoTelepon = "";
         }
         else{
-            System.out.println("No telepon harus dimulai dari angka 0, dan minimal 10 angka");
+            this.errorNoTelepon = "No telepon harus dimulai dengan angka '0', dan minimal 10 digit\n";
         }
     }
     /**
@@ -137,11 +143,15 @@ public class Member {
      */
     @Override 
     public String toString(){
-        return  "Member Gym FitTrack:" +
-                "\n Nama            :" + this.nama +
-                "\n No. Telepon     :" + this.noTelepon +
-                "\n Tanggal Daftar  :" + this.tanggalDaftar +
-                "\n Jenis Paket     :" + this.jenisPaket +
-                "\n-----------------------------------";
+        String output = "Member Gym FitTrack:" +
+                        "\n Nama            :" + this.nama +
+                        "\n No. Telepon     :" + this.noTelepon +
+                        "\n Tanggal Daftar  :" + this.tanggalDaftar +
+                        "\n Jenis Paket     :" + this.jenisPaket +
+                        "\n-----------------------------------";
+        if (!this.errorNoTelepon.isEmpty()){
+            output += "\n[Error]: " + this.errorNoTelepon + "\n-----------------------------------";
+        }
+        return output;
     }
 } 
