@@ -9,7 +9,7 @@ public class TesFitTrack{
         daftarMember[2] = new Member("Sumanto", "0852765499", "31 Juli 2026", "VIP");
         daftarMember[3] = new Member("Amba Tukam", "081122334455", " Oktober 2026");
 
-        daftarMember[1].setNoTelepon("62852765499");
+        daftarMember[2].setNoTelepon("62852765499");
 
         for (int i = 0; i < daftarMember.length; i++){
             System.out.println(daftarMember[i]);

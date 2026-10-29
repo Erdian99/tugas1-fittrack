@@ -101,14 +101,12 @@ public class Member {
      * @param noTelepon Nomor telepon baru yang akan ditetapkan
      */
     public void setNoTelepon(String noTelepon){
-        this.noTelepon = noTelepon;
-
         if (noTelepon != null && noTelepon.startsWith("0") && noTelepon.length() >= MIN_DIGIT_TELP){
             this.noTelepon = noTelepon;
             this.errorNoTelepon = "";
         }
         else{
-            this.errorNoTelepon = "No telepon harus dimulai dengan angka '0', dan minimal 10 digit\n";
+            this.errorNoTelepon = "[No telepon harus diawali angka 0, dan minimal 10 digit]";
         }
     }
     /**
@@ -152,6 +150,7 @@ public class Member {
         if (!this.errorNoTelepon.isEmpty()){
             output += "\n[Error]: " + this.errorNoTelepon + "\n-----------------------------------";
         }
+    
         return output;
     }
-} 
+}
