@@ -46,7 +46,11 @@ public class Member {
     public Member(String nama, String noTelepon, String tanggalDaftar){
         this(nama, noTelepon, tanggalDaftar, "Basic");
     }
+    /**
+     * Constructor default yang mengisi seluruh atribut dengan nilai defaul yang aman.
+     */
     public Member(){
+        this(NAMA_DEFAULT, NO_TELP_DEFAULT, TANGGAL_DAFTAR_DEFAULT, JENIS_PAKET_DEFAULT);
     }
     /**
      * Mengambil nama anggota.
