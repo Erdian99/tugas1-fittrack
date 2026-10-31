@@ -95,27 +95,34 @@ public class Member {
             this.nama = nama;
         }
         else {
-            System.out.println("Nama tidak boleh kosong!!");
+            System.out.println("[ERROR]: Nama tidak boleh kosong atau hanya spasi!");
+            if(this.nama == null){
+                this.nama = NAMA_DEFAULT;
+            }
         }
     }
     /**
      * Menetapkan nomor telepon anggota
-     * Validasi memastikan nomor telepon tidak {@code null}, diawali dengan digit '0' dan minimal 10 digit .
+     * Validasi memastikan nomor telepon tidak {@code null}, diawali dengan digit '0' dan minimal 10 digit.
+     * Jika tidak valid, nilai lama akan dipertahankan dan mencetak pesan error.
      * 
      * @param noTelepon Nomor telepon baru yang akan ditetapkan
      */
     public void setNoTelepon(String noTelepon){
         if (noTelepon != null && noTelepon.startsWith("0") && noTelepon.length() >= MIN_DIGIT_TELP){
             this.noTelepon = noTelepon;
-            this.errorNoTelepon = "";
         }
         else{
-            this.errorNoTelepon = "[No telepon harus diawali angka 0, dan minimal 10 digit]";
+            System.out.println("[ERROR]: Nomor telepon harus diawali angka 0, dan minimal 10 digit!");
+            if (this.errorNoTelepon == null){
+                this.noTelepon = NO_TELP_DEFAULT;
+            }
         }
     }
     /**
      * Menetapkan tanggal pendaftaran anggota.
      * Validasi memastikan tanggal pendaftaran tidak {@code null} dan tidak kosong.
+     * Jika tidak valid, nilai akan di tetapkan ke nilai default.
      * 
      * @param tanggalDaftar Tanggal pendaftaran baru yang akan ditetapkan
      */
@@ -124,7 +131,10 @@ public class Member {
            this.tanggalDaftar = tanggalDaftar;
         }
         else{
-            System.out.println("Silahkan masukkan tanggal daftar!!");
+            System.out.println("[ERROR]: Tanggal daftar tidak boleh kosong!");
+            if (this.tanggalDaftar == null) {
+                this.tanggalDaftar = TANGGAL_DAFTAR_DEFAULT;
+            }
         }
     }
     /**
