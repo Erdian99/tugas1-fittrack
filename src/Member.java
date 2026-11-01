@@ -144,8 +144,16 @@ public class Member {
      * @param jenisPaket Jenis paket baru yang akan dipilih
      */
     public void setJenisPaket(String jenisPaket){
-        if (jenisPaket != null && (jenisPaket.equalsIgnoreCase("Basic") || jenisPaket.equalsIgnoreCase("Premium") || jenisPaket.equalsIgnoreCase("VIP"))){
-            this.jenisPaket = jenisPaket;
+        if (jenisPaket != null && (jenisPaket.equalsIgnoreCase("Basic") 
+            || jenisPaket.equalsIgnoreCase("Premium") 
+            || jenisPaket.equalsIgnoreCase("VIP"))) {
+                if (jenisPaket.equalsIgnoreCase("Basic")) this.jenisPaket = "Basic";
+                else if (jenisPaket.equalsIgnoreCase("Premium")) this.jenisPaket = "Premium";
+                else if (jenisPaket.equalsIgnoreCase("VIP")) this.jenisPaket = "VIP";
+        } else {
+            System.out.println("[ERROR] : Jenis paket hanya boleh berisi Basic, Premium, atau VIP!");
+            if (jenisPaket == null);
+            this.jenisPaket = JENIS_PAKET_DEFAULT;
         }
     }
     /**
