@@ -13,6 +13,7 @@ Sistem Keanggotaan Gym FitTrack merupakan aplikasi berbasis pendataan berbasis J
 * **Nilai Defaul Aman (Fallback System):** Mengisi atribut dengan nilai default jika terjadi kegagalan validasi saat pembentukan objek awal.
 * **Pilihan Keanggotaan Otomatis:** Opsi pendaftaran cepat tanpa input jenis paket, secara otomatis menetapkan paket Basic.
 * **Cetak Profil Terformat:** Menampilkan rangkuman seluruh informasi keanggotaan dalam format yang rapi dan mudah dibaca.
+* **Sistem Penanggalan Terformat:** Tanggal pendaftaran di tetapkan menggunakan format "d MMMM yyyy", contoh: 31 Juli 2026. Penulisan tanggal dengan format berbeda pada setter akan di tolak dan mempertahankan nilai lama/default. Contoh format salah "15-10-2026".
 
 ## Konsep OOP yang Diterapkan
 
