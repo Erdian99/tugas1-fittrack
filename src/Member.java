@@ -114,16 +114,19 @@
          * @param noTelepon Nomor telepon baru yang akan ditetapkan
          */
         public void setNoTelepon(String noTelepon){
-            if (noTelepon != null && noTelepon.startsWith("0") && noTelepon.length() >= MIN_DIGIT_TELP){
-                this.noTelepon = noTelepon;
-            }
-            else{
-                System.out.println("[ERROR]: Nomor telepon harus diawali angka 0, dan minimal 10 digit!");
-                if (this.errorNoTelepon == null){
-                    this.noTelepon = NO_TELP_DEFAULT;
-                }
+        if (noTelepon != null && noTelepon.startsWith("0") && noTelepon.length() >= MIN_DIGIT_TELP){
+            this.noTelepon = noTelepon;
+            this.errorNoTelepon = ""; 
+        } else {
+            System.out.println("[ERROR]: Nomor telepon harus diawali angka 0, dan minimal 10 digit!");
+            
+            this.errorNoTelepon = "Nomor telepon yang diinput tidak valid."; 
+            
+            if (this.noTelepon == null){
+                this.noTelepon = NO_TELP_DEFAULT;
             }
         }
+    }
         /**
          * Menetapkan tanggal pendaftaran anggota.
          * Validasi memastikan tanggal pendaftaran tidak {@code null} dan tidak kosong,
